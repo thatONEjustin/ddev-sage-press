@@ -1,10 +1,15 @@
-# Wordpress - ignore core, configuration, examples, uploads and logs.
-# https://github.com/github/gitignore/blob/main/WordPress.gitignore
+# NOTE: DDEV ignores
+# we don't need all of ddev, this is just a boilerplate example
+.ddev/
+!.ddev/config.yaml
 
-# Core
-#
-# Note: if you want to stage/commit WP core files
-# you can delete this whole section/until Configuration.
+# NOTE: sage ignores
+# sage itself will write an acorn directory that we should just never
+# track
+/wp-content/cache
+
+# NOTE: just ignore wordpress as this repo is about local dev. 
+# not maintaining it.
 /wp-admin/
 /wp-content/index.php
 /wp-content/languages
@@ -17,8 +22,6 @@
 /wp-*.php
 /xmlrpc.php
 
-.ddev/
-!.ddev/config.yaml
 # Configuration
 wp-config.php
 

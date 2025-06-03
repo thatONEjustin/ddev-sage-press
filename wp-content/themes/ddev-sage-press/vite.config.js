@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import tailwindcss from '@tailwindcss/vite';
 import laravel from 'laravel-vite-plugin'
 import { wordpressPlugin, wordpressThemeJson } from '@roots/vite-plugin';
@@ -6,9 +6,10 @@ import { wordpressPlugin, wordpressThemeJson } from '@roots/vite-plugin';
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   const SITE_URL = (process.env.DDEV_PRIMARY_URL) ? process.env.DDEV_PRIMARY_URL : env.WP_SITE_URL;
+  const THEME = (env.THEME_NAME) ? env.THEME_NAME : 'ddev-sage-press';
 
   return {
-    base: '/wp-content/themes/nyc-vein-fibroid/public/build/',
+    base: `/wp-content/themes/${THEME}/public/build/`,
     server: {
       host: '0.0.0.0',
       allowedHosts: [
