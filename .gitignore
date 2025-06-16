@@ -1,6 +1,5 @@
 # NOTE: DDEV ignores
 # we don't need all of ddev, this is just a boilerplate example
-.ddev/
 !.ddev/config.yaml
 
 # NOTE: sage ignores
