@@ -1,6 +1,6 @@
 # NOTE: DDEV ignores
 # we don't need all of ddev, this is just a boilerplate example
-!.ddev/config.yaml
+!/.ddev/config.yaml
 
 # NOTE: sage ignores
 # sage itself will write an acorn directory that we should just never
